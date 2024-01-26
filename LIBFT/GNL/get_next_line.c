@@ -6,7 +6,7 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:13:17 by mdor              #+#    #+#             */
-/*   Updated: 2023/03/14 14:41:54 by mdor             ###   ########.fr       */
+/*   Updated: 2024/01/26 10:40:14 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strjoin_gnl(char *stock, char *buff)
 	i = -1;
 	j = 0;
 	if (!stock)
-		return (ft_strdup(buff));
-	new = malloc((ft_strlen(stock) + ft_strlen(buff) + 1) * sizeof(char));
+		return (ft_strdup_gnl(buff));
+	new = malloc((ft_strlen_g(stock) + ft_strlen_g(buff) + 1) * sizeof(char));
 	if (!new)
 		return ((protect(stock, NULL)));
 	if (stock)
@@ -30,7 +30,7 @@ char	*ft_strjoin_gnl(char *stock, char *buff)
 			new[i] = stock[i];
 	while (buff[j] != '\0')
 		new[i++] = buff[j++];
-	new[ft_strlen(stock) + ft_strlen(buff)] = '\0';
+	new[ft_strlen_g(stock) + ft_strlen_g(buff)] = '\0';
 	free(stock);
 	return (new);
 }
@@ -103,7 +103,7 @@ char	*ft_clean(char *stock, char *line)
 		free(stock);
 		return (NULL);
 	}
-	cleaned = (char *)malloc((ft_strlen(stock) - i + 1) * sizeof(char));
+	cleaned = (char *)malloc((ft_strlen_g(stock) - i + 1) * sizeof(char));
 	if (!cleaned)
 		return (protect(stock, NULL));
 	i++;
@@ -117,10 +117,10 @@ char	*ft_clean(char *stock, char *line)
 
 char	*get_next_line(int fd)
 {
-	static char	*stock[OPEN_MAX];
+	static char	*stock[FOPEN_MAX];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (NULL);
 	stock[fd] = ft_read(fd, stock[fd]);
 	if (!stock[fd])

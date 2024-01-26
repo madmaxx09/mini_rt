@@ -174,7 +174,7 @@ int manage_plan(char **tab, t_options *data)
     new_plan->g = ft_atoi (xyz[1]);
     new_plan->b = ft_atoi (xyz[2]);
     new_plan->next = NULL;
-    free_tabl(xyz);
+    //free_tabl(xyz);
     if (data->plan == NULL)
         data->plan = new_plan;
     else

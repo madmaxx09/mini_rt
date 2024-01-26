@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mini_rt.h                                          :+:      :+:    :+:   */
+/*   minirt.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdor <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:14:58 by mdor              #+#    #+#             */
-/*   Updated: 2024/01/23 19:14:59 by mdor             ###   ########.fr       */
+/*   Updated: 2024/01/26 10:50:44 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <math.h>
 # include "./LIBFT/libft.h"
-# include "mlx.h"
+//# include "mlx.h"
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
@@ -34,8 +34,8 @@ typedef struct s_cyl
 	float	vec_x;
 	float	vec_y;
 	float	vec_z;
-	int		diameter;
-	int		height;
+	float	diameter;
+	float	height;
 	int		r;
 	int		g;
 	int		b;

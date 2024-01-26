@@ -37,17 +37,17 @@ void print_args(t_options *data)
         current_plan = current_plan->next;
     }
 
-    // // Print cylinders
-    // printf("Cylinders:\n");
-    // t_cyl *current_cyl = data->cyl;
-    // while (current_cyl != NULL) {
-    //     printf("\tCenter: X: %f, Y: %f, Z: %f\n", current_cyl->x_cent, current_cyl->y_cent, current_cyl->z_cent);
-    //     printf("\tVector: X: %f, Y: %f, Z: %f\n", current_cyl->vec_x, current_cyl->vec_y, current_cyl->vec_z);
-    //     printf("\tDiameter: %d\n", current_cyl->diameter);
-    //     printf("\tHeight: %d\n", current_cyl->height);
-    //     printf("\tColor: R: %d, G: %d, B: %d\n", current_cyl->r, current_cyl->g, current_cyl->b);
-    //     current_cyl = current_cyl->next;
-    // }
+    // Print cylinders
+    printf("Cylinders:\n");
+    t_cyl *current_cyl = data->cyl;
+    while (current_cyl != NULL) {
+        printf("\tCenter: X: %f, Y: %f, Z: %f\n", current_cyl->x_cent, current_cyl->y_cent, current_cyl->z_cent);
+        printf("\tVector: X: %f, Y: %f, Z: %f\n", current_cyl->vec_x, current_cyl->vec_y, current_cyl->vec_z);
+        printf("\tDiameter: %f\n", current_cyl->diameter);
+        printf("\tHeight: %f\n", current_cyl->height);
+        printf("\tColor: R: %d, G: %d, B: %d\n", current_cyl->r, current_cyl->g, current_cyl->b);
+        current_cyl = current_cyl->next;
+    }
 }
 
 // Define your structs and main function if necessary for testing

@@ -6,7 +6,7 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:05:14 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/15 13:22:55 by mdor             ###   ########.fr       */
+/*   Updated: 2024/01/26 11:06:57 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 		neg *= -1;
 	if (*str == '-' || *str == '+')
 		str++;
-	while (*str >= '0' && *str <= '9')
+	while (*str >= 48 && *str <= 57)
 	{
 		famoso = famoso * 10 + (*str - 48);
 		if (neg == -1 && prot > famoso)

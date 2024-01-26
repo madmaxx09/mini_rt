@@ -6,7 +6,7 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:43:08 by mdor              #+#    #+#             */
-/*   Updated: 2023/10/12 16:39:42 by mdor             ###   ########.fr       */
+/*   Updated: 2024/01/26 10:12:23 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-# include "./PrintF/ft_printf.h"
 # include "./GNL/get_next_line.h"
 
 void		ft_bzero(void *s, size_t n);
