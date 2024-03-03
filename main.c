@@ -6,7 +6,7 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:19:11 by mdor              #+#    #+#             */
-/*   Updated: 2024/01/26 10:42:08 by mdor             ###   ########.fr       */
+/*   Updated: 2024/03/03 17:15:52 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ int	main (int argc, char **argv)
 		return (1);
 	init_data(&data);
 	parse_rt(argv[1], &data);
+	//initialising mlx mlx_start(&data);
 	print_args(&data);
 }
